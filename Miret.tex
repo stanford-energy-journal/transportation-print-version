@@ -1,6 +1,29 @@
-\documentclass{papertex}
+\documentclass[10pt]{papertex}
+\usepackage[utf8]{inputenc}
 
+%% Colour for heading
+\definecolor{color}{rgb}{0.7,0.2,0.2}
+%% Edition - Issue 4 ... . Regular font, larger than in template.
+\edition{
+    \raisebox{-2pt}
+    {\fontsize{6mm}{7mm}\usefont{T1}{bch}{b}{n}{Issue 4: Sustainable Transportation}
+    }}
+%% Document begins here
 \begin{document}
+
+%% Hack to make the Date/Time show as Month YYYY.
+\makeatletter
+\renewcommand{\papertex@headDateTime}{
+    \raisebox{-5pt}
+    {\fontsize{5mm}{6mm}\usefont{T1}{bch}{b}{n}{April 2014}}
+    }
+\makeatother
+%% Footer hack
+\fancyfoot[C]{\copyright Stanford Energy Journal \the\year}
+%% "Logo" - Stanford Energy Journal in large font.
+\mylogo{{\fontsize{12mm}{14mm} \usefont{T1}{bch}{b}{n} 
+    \noindent\textcolor{color}{Stanford Energy Journal}}%
+}
 
 \begin{news}{2}{Emerging Technologies for the Future Automobile}{Santiago Miret}{}{}
 
